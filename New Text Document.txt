@@ -1,2 +1,0 @@
-User:admin, test123
-password: password123
