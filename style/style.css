@@ -143,12 +143,59 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* some Fact section */
+/* Service-section style */
+.service-section {
+    padding-bottom: 120px;
+    padding-top: 40px;
+}
+
+/* some Fact section style */
 .section-title {
     color: #131313;
     font-size: 45px;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.service-container {
+    display: flex;
+    gap: 60px;
+}
+
+.service-image img {
+    max-width: 500px;
+    height: 90%;
+    margin-left:60px;
+}
+
+.service-box {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.service-content h1 {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.service-box h2 {
+    color: #131313;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.service-box p {
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    /* 162.5% */
 }
 
 .section-description {
@@ -158,6 +205,31 @@ nav a:hover {
     line-height: 26px;
     /* 162.5% */
 }
+
+.ten-years-badge {
+    border-radius: 8px;
+    background: #FF900E;
+    width: 300px;
+    padding: 30px;
+    position: relative;
+    bottom: 100px;
+}
+.ten-years-badge h1{
+    color: #FFF;
+text-align: center;
+font-size: 65px;
+font-weight: 700;
+line-height: 70px; /* 107.692% */
+}
+.ten-years-badge p{
+    color: #FFF;
+text-align: center;
+font-size: 25px;
+font-weight: 500;
+line-height: 40px;
+}
+
+/* Some fact section style */
 
 .somefact-container {
     display: flex;
@@ -206,29 +278,37 @@ nav a:hover {
     height: 50px;
     flex-shrink: 0;
 }
-.footer-section p{
-    color:  #424242;
-text-align: center;
-font-size: 18px;
-font-weight: 400;
+
+.footer-section p {
+    color: #424242;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
 }
-.footer-section{
+
+.footer-section {
     border-radius: 8px;
-background: #FFF4E7;
-padding: 20px 0;
-margin-bottom: 20px;
+    background: #FFF4E7;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
+
 /* Resoponsive style */
 
 @media screen and (max-width:576px) {
 
     .header,
-    .SomeFacts-section {
+    .SomeFacts-section,
+    .service-container {
         padding: 30px;
+    }
+    .service-image img {
+        max-width: 383px;
     }
 
     nav,
-    .somefact-container {
+    .somefact-container,
+    .service-container {
         flex-direction: column;
     }
 
@@ -261,19 +341,22 @@ margin-bottom: 20px;
         padding: 50px;
 
     }
- .sponsor-logo{
-    text-align: center;
-    display: block;
- }
- .sponsor-logo img,
- .sponsor-logo,
- .sponsor-section{
-   padding: 20px;
- }
- .sponsor-logo{
-    margin-top: 20px;
- }
- 
+
+    .sponsor-logo {
+        text-align: center;
+        display: block;
+    }
+
+    .sponsor-logo img,
+    .sponsor-logo,
+    .sponsor-section {
+        padding: 20px;
+    }
+
+    .sponsor-logo {
+        margin-top: 20px;
+    }
+
 
 
 }
@@ -281,9 +364,16 @@ margin-bottom: 20px;
 @media screen and (min-width:576px) and (max-width:840px) {
 
     .header,
-    .SomeFacts-section, 
-    .sponsor-logo {
+    .SomeFacts-section,
+    .sponsor-logo,
+    .service-container{
         padding: 30px;
+    }
+    .service-image img {
+        max-width: 91%;
+    }
+    .service-section {
+        padding-bottom:0;
     }
 
     /* nav{
@@ -298,15 +388,17 @@ margin-bottom: 20px;
         font-size: 55px;
     }
 
-    .feature-container {
+    .feature-container,
+    .service-container {
         flex-direction: column;
         padding: 50px 30px;
 
     }
+
     .sponsor-logo img {
         width: 120px;
         height: 44px;
-     
+
     }
 
     .image-container img {
@@ -332,8 +424,14 @@ margin-bottom: 20px;
 }
 
 @media screen and (min-width:840px) and (max-width:1080px) {
-    .header {
+    .header, .service-container {
         padding: 50px;
+    }
+    .service-image img {
+        max-width: 400px;
+    }
+    .service-container{
+        gap: 30px;
     }
 
     /* nav{
@@ -361,6 +459,7 @@ margin-bottom: 20px;
         padding: 0 30px;
 
     }
+
     .sponsor-logo img {
         width: 129.833px;
         height: 44px;
